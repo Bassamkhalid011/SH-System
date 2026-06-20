@@ -24,10 +24,7 @@ Built as a final project for an Object-Oriented Programming (OOP) lab course.
 
 - **User Authentication** — Secure signup and login system with credential validation
 - **Academic Profile** — Enter and save Matric, FSC, NTS/ECAT, and NUST NET marks
-- **Aggregate Calculator** — Automatically computes university-specific aggregates:
-  - General formula: Matric 10% + FSC 40% + NTS 50%
-  - NUST formula: Matric 10% + FSC 15% + NET 75%
-  - UET/ECAT formula: Matric 17% + FSC 50% + ECAT 33%
+- **Aggregate Calculator** — Automatically computes university-specific aggregates
 - **University Finder** — Browse and filter universities based on your eligibility
 - **Save & Apply** — Bookmark universities and track your applications
 - **Dashboard** — Overview of saved and applied universities with counters
@@ -140,22 +137,7 @@ java -jar target/SHS-1.0-SNAPSHOT.jar
 
 ---
 
-## 🏫 Universities Supported
 
-| University | Location | Type | Merit Formula |
-|---|---|---|---|
-| NUST | Islamabad | Public | NET (Matric 10% + FSC 15% + NET 75%) |
-| UET Lahore | Lahore | Public | ECAT (Matric 17% + FSC 50% + ECAT 33%) |
-| COMSATS University | Islamabad/Lahore/Wah | Public | General |
-| FAST-NUCES | Islamabad/Lahore/Karachi | Private | General |
-| University of Punjab | Lahore | Public | General |
-| Quaid-i-Azam University | Islamabad | Public | General |
-| IBA Karachi | Karachi | Public | General |
-| University of Karachi | Karachi | Public | General |
-| LUMS | Lahore | Private | General |
-| University of Peshawar | Peshawar | Public | General |
-
----
 
 ## 👥 Authors
 
