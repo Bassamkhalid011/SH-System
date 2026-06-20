@@ -6,19 +6,7 @@ Built as a final project for an Object-Oriented Programming (OOP) lab course.
 
 ---
 
-## 📋 Table of Contents
 
-- [Features](#-features)
-- [Tech Stack](#-tech-stack)
-- [Project Structure](#-project-structure)
-- [OOP Concepts Used](#-oop-concepts-used)
-- [Getting Started](#-getting-started)
-- [How to Run](#-how-to-run)
-- [Universities Supported](#-universities-supported)
-- [Screenshots](#-screenshots)
-- [Authors](#-authors)
-
----
 
 ## ✨ Features
 
