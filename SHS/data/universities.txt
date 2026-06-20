@@ -1,0 +1,10 @@
+NUST|Islamabad|Public|60.0|60.0|50.0|60.0|Engineering, Computer Science, Business, Architecture|NUST
+UET Lahore|Lahore|Public|60.0|60.0|40.0|55.0|Electrical, Mechanical, Civil, Chemical Engineering|UET
+COMSATS University|Islamabad/Lahore/Wah|Public|50.0|50.0|50.0|55.0|CS, IT, Software Engineering, AI, Data Science, Electrical Engineering|GENERAL
+FAST-NUCES|Islamabad/Lahore/Karachi|Private|60.0|60.0|50.0|60.0|Computer Science, Software Engineering, Electrical Engineering, Data Science|GENERAL
+University of Punjab|Lahore|Public|45.0|45.0|40.0|50.0|Engineering, Medicine, Business, Arts, Social Sciences|GENERAL
+Quaid-i-Azam University|Islamabad|Public|50.0|50.0|40.0|50.0|Sciences, Social Sciences, Pharmacy, Biochemistry|GENERAL
+IBA Karachi|Karachi|Public|60.0|65.0|60.0|65.0|Business Administration, Computer Science, Economics|GENERAL
+University of Karachi|Karachi|Public|45.0|45.0|40.0|45.0|Arts, Sciences, Commerce, Pharmacy, Law|GENERAL
+LUMS|Lahore|Private|80.0|80.0|70.0|75.0|Business, CS, Economics, Social Sciences, Law|GENERAL
+University of Peshawar|Peshawar|Public|45.0|45.0|40.0|48.0|Arts, Sciences, Law, Islamic Studies, Medicine|GENERAL

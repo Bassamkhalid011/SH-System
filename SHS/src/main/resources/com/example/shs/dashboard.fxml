@@ -1,0 +1,320 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane prefHeight="700.0" prefWidth="1100.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.shs.DashboardController">
+
+    <!-- Top Header Bar -->
+    <top>
+        <HBox alignment="CENTER_LEFT" prefHeight="60.0" style="-fx-background-color: linear-gradient(to right, #2d5016, #4a6741); -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.2), 8, 0, 0, 2);">
+            <padding>
+                <Insets bottom="15.0" left="25.0" right="25.0" top="15.0" />
+            </padding>
+            <children>
+                <!-- System Title in Header -->
+                <HBox alignment="CENTER_LEFT" spacing="15.0">
+                    <children>
+                        <Label text="STUDENT HELPING SYSTEM" textFill="WHITE">
+                            <font>
+                                <Font name="Arial Black" size="16.0" />
+                            </font>
+                        </Label>
+                        <Label text="|" textFill="#c8d5c8">
+                            <font>
+                                <Font name="Arial" size="16.0" />
+                            </font>
+                        </Label>
+                        <Label text="Dashboard" textFill="#c8d5c8">
+                            <font>
+                                <Font name="Arial" size="14.0" />
+                            </font>
+                        </Label>
+                    </children>
+                </HBox>
+
+                <Region HBox.hgrow="ALWAYS" />
+
+                <!-- Welcome Message and Logout -->
+                <HBox alignment="CENTER_RIGHT" spacing="20.0">
+                    <children>
+                        <Label fx:id="welcomeLabel" text="Welcome, Student" textFill="WHITE">
+                            <font>
+                                <Font name="Arial Bold" size="14.0" />
+                            </font>
+                        </Label>
+                        <Button fx:id="logoutButton" onAction="#handleLogout" prefHeight="35.0" style="-fx-background-color: linear-gradient(to right, #e74c3c, #c0392b); -fx-text-fill: white; -fx-font-size: 12; -fx-font-weight: bold; -fx-background-radius: 6; -fx-border-radius: 6; -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.2), 4, 0, 0, 2);" text="Logout" />
+                    </children>
+                </HBox>
+            </children>
+        </HBox>
+    </top>
+
+    <!-- Left Sidebar Navigation -->
+    <left>
+        <VBox alignment="TOP_CENTER" prefHeight="640.0" prefWidth="280.0" spacing="15.0" style="-fx-background-color: linear-gradient(to bottom, #34495e, #2c3e50);">
+            <padding>
+                <Insets bottom="25.0" left="20.0" right="20.0" top="25.0" />
+            </padding>
+            <children>
+                <!-- User Avatar Section -->
+                <VBox alignment="CENTER" spacing="8.0" style="-fx-background-color: rgba(255, 255, 255, 0.1); -fx-background-radius: 12; -fx-padding: 20;">
+                    <children>
+                        <VBox alignment="CENTER" style="-fx-background-color: white; -fx-background-radius: 50; -fx-padding: 8;">
+                            <children>
+                                <Label text="👤" style="-fx-font-size: 36px;" />
+                            </children>
+                        </VBox>
+                        <Label fx:id="userNameLabel" text="Student Name" textFill="WHITE">
+                            <font>
+                                <Font name="Arial Bold" size="14.0" />
+                            </font>
+                        </Label>
+                        <Label text="Student Portal" textFill="#bdc3c7">
+                            <font>
+                                <Font name="Arial" size="11.0" />
+                            </font>
+                        </Label>
+                    </children>
+                </VBox>
+
+                <!-- Navigation Buttons -->
+                <VBox spacing="8.0" style="-fx-padding: 10 0;">
+                    <children>
+                        <Label text="NAVIGATION" textFill="#95a5a6">
+                            <font>
+                                <Font name="Arial Bold" size="10.0" />
+                            </font>
+                        </Label>
+
+                        <Button fx:id="profileButton" onAction="#handleProfile" prefHeight="45.0" prefWidth="240.0" style="-fx-background-color: linear-gradient(to right, #27ae60, #2ecc71); -fx-text-fill: white; -fx-font-size: 13; -fx-font-weight: bold; -fx-alignment: center-left; -fx-background-radius: 8; -fx-border-radius: 8; -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.15), 6, 0, 0, 2);" text="   👤   Profile Settings" />
+
+                        <Button fx:id="marksButton" onAction="#handleMarks" prefHeight="45.0" prefWidth="240.0" style="-fx-background-color: linear-gradient(to right, #3498db, #2980b9); -fx-text-fill: white; -fx-font-size: 13; -fx-font-weight: bold; -fx-alignment: center-left; -fx-background-radius: 8; -fx-border-radius: 8; -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.15), 6, 0, 0, 2);" text="   📊   Enter Marks" />
+
+                        <Button fx:id="findUniversitiesButton" onAction="#handleFindUniversities" prefHeight="45.0" prefWidth="240.0" style="-fx-background-color: linear-gradient(to right, #e67e22, #d35400); -fx-text-fill: white; -fx-font-size: 13; -fx-font-weight: bold; -fx-alignment: center-left; -fx-background-radius: 8; -fx-border-radius: 8; -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.15), 6, 0, 0, 2);" text="   🎯   Find Universities" />
+
+                        <Button fx:id="viewAllButton" onAction="#handleViewAll" prefHeight="45.0" prefWidth="240.0" style="-fx-background-color: linear-gradient(to right, #9b59b6, #8e44ad); -fx-text-fill: white; -fx-font-size: 13; -fx-font-weight: bold; -fx-alignment: center-left; -fx-background-radius: 8; -fx-border-radius: 8; -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.15), 6, 0, 0, 2);" text="   🏛️   All Universities" />
+                    </children>
+                </VBox>
+
+                <!-- Quick Stats Section - Made Clickable -->
+                <VBox alignment="CENTER" spacing="8.0" style="-fx-background-color: rgba(255, 255, 255, 0.05); -fx-background-radius: 12; -fx-padding: 15;">
+                    <VBox.margin>
+                        <Insets top="20.0" />
+                    </VBox.margin>
+                    <children>
+                        <Label text="QUICK STATS" textFill="#95a5a6">
+                            <font>
+                                <Font name="Arial Bold" size="10.0" />
+                            </font>
+                        </Label>
+                        <HBox alignment="CENTER" spacing="15.0">
+                            <children>
+                                <!-- Clickable Saved Universities Counter -->
+                                <Button fx:id="savedButton" onAction="#handleSavedUniversities" style="-fx-background-color: transparent; -fx-border-color: transparent; -fx-cursor: hand;">
+                                    <graphic>
+                                        <VBox alignment="CENTER" spacing="2.0">
+                                            <children>
+                                                <Label fx:id="savedNumberCounter" text="0" textFill="WHITE">
+                                                    <font>
+                                                        <Font name="Arial Bold" size="18.0" />
+                                                    </font>
+                                                </Label>
+                                                <Label text="Saved" textFill="#bdc3c7">
+                                                    <font>
+                                                        <Font name="Arial" size="9.0" />
+                                                    </font>
+                                                </Label>
+                                            </children>
+                                        </VBox>
+                                    </graphic>
+                                </Button>
+
+                                <!-- Clickable Applied Universities Counter -->
+                                <Button fx:id="appliedButton" onAction="#handleAppliedUniversities" style="-fx-background-color: transparent; -fx-border-color: transparent; -fx-cursor: hand;">
+                                    <graphic>
+                                        <VBox alignment="CENTER" spacing="2.0">
+                                            <children>
+                                                <Label fx:id="appliedNumberCounter" text="0" textFill="WHITE">
+                                                    <font>
+                                                        <Font name="Arial Bold" size="18.0" />
+                                                    </font>
+                                                </Label>
+                                                <Label text="Applied" textFill="#bdc3c7">
+                                                    <font>
+                                                        <Font name="Arial" size="9.0" />
+                                                    </font>
+                                                </Label>
+                                            </children>
+                                        </VBox>
+                                    </graphic>
+                                </Button>
+                            </children>
+                        </HBox>
+                    </children>
+                </VBox>
+            </children>
+        </VBox>
+    </left>
+
+    <!-- Main Content Area -->
+    <!-- Replace your center content area with this -->
+    <center>
+        <ScrollPane fx:id="mainScrollPane" fitToWidth="true" style="-fx-background-color: #ffffff; -fx-background: #ffffff;">
+            <content>
+                <VBox fx:id="mainContent" spacing="25.0" style="-fx-background-color: #ffffff;">
+                    <padding>
+                        <Insets bottom="30.0" left="35.0" right="35.0" top="30.0" />
+                    </padding>
+                    <children>
+                        <!-- Dashboard Title -->
+                        <Label text="Dashboard" textFill="#2c3e50">
+                            <font>
+                                <Font name="Arial Bold" size="28.0" />
+                            </font>
+                        </Label>
+
+                        <!-- System Statistics Section -->
+                        <VBox spacing="10.0" style="-fx-background-color: #f8f9fa; -fx-background-radius: 8; -fx-padding: 20;">
+                            <children>
+                                <Label text="System Statistics" textFill="#2c3e50">
+                                    <font>
+                                        <Font name="Arial Bold" size="16.0" />
+                                    </font>
+                                </Label>
+                                <Label text="Total Registered Students: 1" textFill="#495057">
+                                    <font>
+                                        <Font name="Arial" size="12.0" />
+                                    </font>
+                                </Label>
+                                <Label text="Total Universities: 10" textFill="#495057">
+                                    <font>
+                                        <Font name="Arial" size="12.0" />
+                                    </font>
+                                </Label>
+                                <Label text="Students with Complete Marks: 0" textFill="#495057">
+                                    <font>
+                                        <Font name="Arial" size="12.0" />
+                                    </font>
+                                </Label>
+
+                                <!-- Export/Backup Buttons -->
+                                <HBox spacing="10.0" style="-fx-padding: 10 0 0 0;">
+                                    <children>
+                                        <Button style="-fx-background-color: #17a2b8; -fx-text-fill: white; -fx-padding: 8 16; -fx-background-radius: 4;" text="Export Data" />
+                                        <Button style="-fx-background-color: #6c757d; -fx-text-fill: white; -fx-padding: 8 16; -fx-background-radius: 4;" text="Backup Data" />
+                                    </children>
+                                </HBox>
+                            </children>
+                        </VBox>
+
+                        <!-- QUICK ACTION BUTTONS SECTION -->
+                        <VBox spacing="20.0">
+                            <children>
+                                <Label text="Quick Actions" textFill="#2c3e50">
+                                    <font>
+                                        <Font name="Arial Bold" size="20.0" />
+                                    </font>
+                                </Label>
+
+                                <!-- Three Big Action Buttons -->
+                                <HBox alignment="CENTER" spacing="25.0">
+                                    <children>
+                                        <!-- Profile Settings Button -->
+                                        <Button fx:id="profileQuickButton" onAction="#handleProfile" prefHeight="150.0" prefWidth="220.0" style="-fx-background-color: linear-gradient(to bottom, #ffffff, #f1f8e9);                                                    -fx-background-radius: 15;                                                    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.2), 12, 0, 0, 4);                                                    -fx-border-color: #4caf50;                                                    -fx-border-width: 3;                                                    -fx-border-radius: 15;                                                    -fx-cursor: hand;" text="">
+                                            <graphic>
+                                                <VBox alignment="CENTER" spacing="10.0">
+                                                    <children>
+                                                        <Label style="-fx-font-size: 32px; -fx-text-fill: #4caf50;" text="👤" />
+                                                        <Label text="Profile Settings" textFill="#2c3e50">
+                                                            <font>
+                                                                <Font name="Arial Bold" size="16.0" />
+                                                            </font>
+                                                        </Label>
+                                                        <Label maxWidth="180.0" text="Update your personal information and preferences" textAlignment="CENTER" textFill="#666666" wrapText="true">
+                                                            <font>
+                                                                <Font name="Arial" size="12.0" />
+                                                            </font>
+                                                        </Label>
+                                                    </children>
+                                                </VBox>
+                                            </graphic>
+                                        </Button>
+
+                                        <!-- Academic Records Button -->
+                                        <Button fx:id="marksQuickButton" onAction="#handleMarks" prefHeight="150.0" prefWidth="220.0" style="-fx-background-color: linear-gradient(to bottom, #ffffff, #e3f2fd);                                                    -fx-background-radius: 15;                                                    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.2), 12, 0, 0, 4);                                                    -fx-border-color: #2196f3;                                                    -fx-border-width: 3;                                                    -fx-border-radius: 15;                                                    -fx-cursor: hand;" text="">
+                                            <graphic>
+                                                <VBox alignment="CENTER" spacing="10.0">
+                                                    <children>
+                                                        <Label style="-fx-font-size: 32px; -fx-text-fill: #2196f3;" text="📊" />
+                                                        <Label text="Academic Records" textFill="#2c3e50">
+                                                            <font>
+                                                                <Font name="Arial Bold" size="16.0" />
+                                                            </font>
+                                                        </Label>
+                                                        <Label maxWidth="180.0" text="Enter your marks and academic achievements" textAlignment="CENTER" textFill="#666666" wrapText="true">
+                                                            <font>
+                                                                <Font name="Arial" size="12.0" />
+                                                            </font>
+                                                        </Label>
+                                                    </children>
+                                                </VBox>
+                                            </graphic>
+                                        </Button>
+
+                                        <!-- Find Universities Button -->
+                                        <Button fx:id="universitiesQuickButton" onAction="#handleFindUniversities" prefHeight="150.0" prefWidth="220.0" style="-fx-background-color: linear-gradient(to bottom, #ffffff, #fff3e0);                                                    -fx-background-radius: 15;                                                    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.2), 12, 0, 0, 4);                                                    -fx-border-color: #ff9800;                                                    -fx-border-width: 3;                                                    -fx-border-radius: 15;                                                    -fx-cursor: hand;" text="">
+                                            <graphic>
+                                                <VBox alignment="CENTER" spacing="10.0">
+                                                    <children>
+                                                        <Label style="-fx-font-size: 32px; -fx-text-fill: #ff9800;" text="🎯" />
+                                                        <Label text="Find Universities" textFill="#2c3e50">
+                                                            <font>
+                                                                <Font name="Arial Bold" size="16.0" />
+                                                            </font>
+                                                        </Label>
+                                                        <Label maxWidth="180.0" text="Discover universities that match your profile" textAlignment="CENTER" textFill="#666666" wrapText="true">
+                                                            <font>
+                                                                <Font name="Arial" size="12.0" />
+                                                            </font>
+                                                        </Label>
+                                                    </children>
+                                                </VBox>
+                                            </graphic>
+                                        </Button>
+                                    </children>
+                                </HBox>
+                            </children>
+                        </VBox>
+
+                        <!-- Instructions -->
+                        <Label text="Select an option from the menu to get started" textFill="#6c757d">
+                            <font>
+                                <Font name="Arial" size="14.0" />
+                            </font>
+                        </Label>
+
+                        <!-- Footer -->
+                        <Label text="© 2025 Student Helping System. All rights reserved." textFill="#95a5a6">
+                            <font>
+                                <Font name="Arial" size="9.0" />
+                            </font>
+                            <VBox.margin>
+                                <Insets top="30.0" />
+                            </VBox.margin>
+                        </Label>
+                    </children>
+                </VBox>
+            </content>
+        </ScrollPane>
+    </center>
+</BorderPane>
